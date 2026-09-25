@@ -1,8 +1,8 @@
-function Welcome(props) {
+function Welcome(props){
     return(
-        <div>
-            <h2>Welcome to Room Split, {props.name}</h2></div>
+        <>
+        <h2>Welcome {props.name}</h2>
+        </>
     )
 }
 export default Welcome
-

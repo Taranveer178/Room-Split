@@ -1,10 +1,11 @@
-function Groupcard(props){
+function GroupCard(props){
     return(
-        <div>
-        <h1>{props.name}</h1>
+        <>
+        <h2>{props.name}</h2>
         <p>Members: {props.members}</p>
-        <p>Expenses: {props.totalExpense}</p>
-        </div>
+        <p>Total Expense: {props.totalExpense}</p>
+
+        </>
     )
-}z
-export default Groupcard
+}
+export default GroupCard

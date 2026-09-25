@@ -5,7 +5,16 @@ import { useState } from 'react'
 
 function App(){
   const [groupName, setGroupName]=useState("")
-  const [groupDescription, setGroupDescription]=useState("")
+  const [groupDescfunction Header() {
+  return (
+    <header>
+      <h1>RoomSplit</h1>
+      <p>Track expenses with your roommates.</p>
+    </header>
+  )
+}
+
+export default Headerription, setGroupDescription]=useState("")
   const [groups, setGroups] =useState([
     {id:1, name:"Room", members:3, totalExpense:1000},
     {id:2, name:"Office", members:5, totalExpense:1200},

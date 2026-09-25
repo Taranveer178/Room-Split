@@ -1,10 +1,9 @@
-function Header() {
-  return (
+function Header(){
+  return(
     <header>
-      <h1>RoomSplit</h1>
-      <p>Track expenses with your roommates.</p>
+    <h1>Room Split</h1>
+    <p>Expense Split</p>
     </header>
   )
 }
-
 export default Header
