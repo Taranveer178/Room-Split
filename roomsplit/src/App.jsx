@@ -1,38 +1,28 @@
-import React from "react";
 import Header from "./components/Header";
 import Welcome from "./components/Welcome";
 import GroupCard from "./components/GroupCard";
 import { useState } from "react";
 
 function App(){
-
-  const [groups, setGroups] = useState([
-    {id:1, name:"Room", members:3, totalExpense:1500},
-    {id:2, name:"College", members:3, totalExpense:1500},
-    {id:3, name:"Goa Trip", members:3, totalExpense:1500},
-
-  ])
-  function createGroup(){
-        const newGroup={id:groups.length+1, name:"", members:8, totalExpense:1600}
-        setGroups([...groups,newGroup])
-  }
+   const [groups, setGroups] =useState([
+      {id:1, name:"Room", members:3, totalExpense:1400},
+      {id:2, name:"Room2", members:3, totalExpense:1400},
+      {id:3, name:"Room3", members:3, totalExpense:1400},
+    ])
+    function addGroup(){
+      const new_group =  {id:4, name:"Room4", members:3, totalExpense:1400}
+      setGroups([...groups, new_group])
+    
+    }
   return(
-    <>
+    <div>
     <Header />
-    <Welcome name="Taran"/>
-
-    <h3>Create New Group</h3>
-    <form onSubmit={createGroup}>
-      Group Name: <input value={groupName} type="text" name="groupname" id="" onChange={(e)=>setGr}/> <br />
-      Members: <input value={groupMembers} type="text" name="members" id=""/><br />
-      <button type="submit">Submit</button>
-    </form>
-
+    <Welcome />
     {groups.map((e)=>(
-      <GroupCard key ={e.key} name ={e.name} members={e.members} totalExpense={e.totalExpense}/>
+      <GroupCard key={e.id} name={e.name} members={e.members} totalExpense={e.totalExpense} />
     ))}
-
-    </>
+    <button onClick={addGroup}>Add Group</button>
+    </div>
   )
 }
 export default App

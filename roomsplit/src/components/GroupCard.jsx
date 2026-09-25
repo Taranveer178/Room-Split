@@ -8,4 +8,4 @@ function GroupCard(props){
         </>
     )
 }
-export default GroupCard
+export default Groupcard
